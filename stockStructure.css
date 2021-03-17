@@ -1,0 +1,157 @@
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    width: 200px;
+    padding: 3px;
+    margin: 5px;
+    box-sizing: border-box;
+  }
+  fieldset{
+      position: relative;
+  }
+  /* legend{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  } */
+
+h1 {
+    font : 1em "typewriter", monospace;
+    align-self : end;
+  }
+ 
+  input:focus, textarea:focus {
+    background   : rgba(0,0,0,.1);
+    border-radius: 5px;
+  }
+
+  textarea {
+    grid-row: 1 / 5;
+
+    display : block;
+  
+    padding : 10px;
+    margin  : 10px 0 0 -10px;
+    width   : 100%;
+    height  : 90%;
+  
+    border-right: 1px solid;
+  
+    /* resize  : none; */
+    overflow: auto;
+  }
+
+  button {
+  padding      : 5px;
+  font         : bold .6em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+  cursor       : pointer;
+  /* transform    : rotate(-1.5deg); */
+}
+
+button:after {
+    content      : " +";
+  }
+
+button:hover,
+button:focus {
+  outline     : none;
+  background  : #000;
+  color       : #FFF;
+}
+
+/* Remove system level styling */
+input[type="text"],select, input[type="number"],textarea{
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+}
+
+
+/* removing number box arrow icon which stand on right side of box 
+And select tag is removing system styles*/
+select,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    
+}
+/* Here is using wrapper because of here isn't supporting ::before and ::aftere */
+.select-wrapper{
+    position: relative;
+}
+.select-wrapper::after{
+    content: "▼";
+    font-size: 1rem;
+    top: 6px;
+    right: 10px;
+    position: absolute;
+}
+
+/* styles for FILE */
+input[type="file"] {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  label[for="productImage"] {
+    box-shadow: 1px 1px 3px #ccc;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  label[for="productImage"]:hover {
+    background: linear-gradient(to bottom, #fff, #ddd);
+  }
+  
+  label[for="productImage"]:active {
+    box-shadow: inset 1px 1px 3px #ccc;
+  }
+
+  /* REQUIRED styles */
+  /* input:required {
+    border: 1px solid black;
+  }
+  fieldset > li{
+      margin-bottom: 20px;
+      display: flex;
+      flex-flow: row wrap;
+  }
+  input + span {
+      position: relative;
+  }
+  input:required + span::after{
+      font-size: 0.7rem;
+      position: absolute;
+      content: "required";
+      color: white;
+      background-color: rgb(63, 62, 62);
+      padding: 5px 10px;
+      top: -26px;
+      left: -70px;
+  } */
+
+
+  /* DATA VALIDATION */
+  input + span{
+      position: relative;
+  }
+  input + span::before{
+      position: absolute;
+      right: -20px;
+  }
+  input:invalid {
+    border: 2px solid red;
+  }
+  input:invalid + span::before{
+    content: "✖";
+    color: red;
+  }
+  input:valid + span::after{
+      content: "✓";
+      color: green;
+  }

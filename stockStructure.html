@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock handler</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="stockStructure.css">
+</head>
+<body>
+    <div class="container"></div>
+        <form action="#">
+
+           
+            <fieldset>
+                <legend>You can add your stock lists and retreive wherever</legend>
+
+                 <!-- title -->
+            <h1>Stock handler</h1>
+           
+                <ul>
+            <!-- Product Image -->
+
+                    <li>
+                        <label for="productImage">Upload Your Product image:- <abbr title="required" >*</abbr>
+                            <input type="file" id="productImage" name="image" required>
+                            <span></span>
+                        </label>
+                        
+                    </li> 
+                    <!-- Name of product -->
+                   <li>
+                       <label for="productName"> Name :- <abbr title="required">*</abbr></label>
+                       <input type="text" id="productName" name="name" maxlength="20" minlength="6" required>
+                       <span></span>
+
+                    </li> 
+        
+                    <!-- Which Categary -->
+                <li><label for="Category"> Categary :- <abbr title="required" >*</abbr> </label>
+                    <select name="" id="Category" class=".select-wrapper" required>
+                        <option value="NO">NO</option>
+                        <option value="1year">1year</option>
+                        <option value="2year">2year</option>
+                        <option value="5year">5year</option>
+                        <option value="custom">custom</option>
+                    </select>    
+                </li>
+        
+                    <!-- Price -->
+                    <li><label for="productPrice">price :-</label> <input type="tel" id="productPrice" min="5" max="99999" maxlength="5" required>
+                        <span></span>
+                    </li> 
+        
+                    <!-- Barcode of your products -->
+                <li>
+                    <label for="productBarcode">Barcode :-</label> <input type="number" id="productBarcode" minlength="4" maxlength="6"  required>
+                    <span></span>
+
+                </li>
+        
+                    <!-- Write something about your products -->
+                        <li><label for="productDescription">Description:-
+                            </label>  <br>
+                    <textarea name="" id="productDescription" cols="30" rows="4" placeholder="Please type product description..."></textarea> 
+                </li>
+        
+                    <!-- Warranty -->
+                    <li>
+                        <label for="ProductWarranty">Warranty :-</label>
+                        <select name="" id="ProductWarranty" class=".select-wrapper">
+                            <option value="NO">NO</option>
+                            <option value="1year">1year</option>
+                            <option value="2year">2year</option>
+                            <option value="5year">5year</option>
+                        <option selected value="Custom">Custom</option>
+        
+                        </select>
+                    </li>
+    
+                    <!-- Quarranty -->
+                    <li>
+                        <label for="productQuarranty">Quarranty :-</label>
+                    <select name="" id="productQuarranty" class=".select-wrapper">
+                        <option value="NO">NO</option>
+                        <option selected value="1year">1year</option>
+                        <option value="2year">2year</option>
+                        <option value="5year">5year</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                    </li>
+                    
+        
+                    <!-- Stocks availability -->
+                    <li>
+                        <label for="ProductAvailable">Available Stocks :-</label> <input type="text" id="ProductAvailable"> 
+                    </li>
+        
+                    <!-- minimum discouts -->
+                    <li>
+                        <label for="productMinDsct">Min Discout:- </label>
+                        <input type="number" placeholder="%" id="productMinDsct" min="1" max="6"> 
+
+                       <span></span>
+
+                        <input type="number" placeholder="Disounted amount" id="discoutedAmount">
+                         <input type="number" placeholder="Customer amount" id="customerAmount">
+                    </li>
+                         
+        
+                         <!-- maximum discout -->
+                   <li> 
+                       <label for="productMaxDsct">Max Discout:-</label>
+                    <input type="number" placeholder="%" id="productMaxDsct" min="1" max="3"> 
+
+                    <span></span>
+
+                    <input type="number" placeholder="Disounted amount" > <input type="number" placeholder="Customer amount" >
+                </li>
+                         
+        
+                         <!-- Products Usages -->
+                    <li>
+                        <label for="productUsages">Product Usages :-</label> <br>
+                        <textarea name="" id="productUsages" cols="30" rows="4" >You can use this... 
+                            1.
+                            2.
+                         </textarea>
+                        </li>
+        
+                    <button type="reset">Reset</button>
+                    <button type="submit">Add stock</button>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
